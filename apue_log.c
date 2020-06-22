@@ -115,7 +115,7 @@ log_doit(int errnoflag, int error, int priority, const char *fmt,
     strcat(buf, "\n");
     if (log_to_stderr) {
         fflush(stdout);
-        fputs(buf, strerror);
+        fputs(buf, stderr);
         fflush(stderr);
     } else {
         syslog(priority, "%s", buf);
