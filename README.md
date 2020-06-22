@@ -6,6 +6,8 @@ UNIX 环境高级编程 第三版
 
 ## apue_err.c
 
+输出至标准错误的出错函数
+
 |函数|从strerror添加字符串？|strerror的参数|终止？|
 |:--|:--:|:--:|:--|
 |err_dump|是|errno|abort();|
@@ -17,6 +19,8 @@ UNIX 环境高级编程 第三版
 |err_cont|是|显式参数|return;|
 
 ## apue_log.c
+
+用于守护进程的出错函数
 
 |函数|从strerror添加字符串？|strerror的参数|终止？|
 |:--|:--:|:--:|:--|
