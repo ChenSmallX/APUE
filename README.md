@@ -12,13 +12,13 @@ Functions that print error to stderr.
 
 |函数<br>functino|从strerror添加字符串？<br>add str from strerror?|strerror的参数<br>args of strerror|终止？<br>terminate?|
 |:--|:--:|:--:|:--|
-|err_dump|是|errno|abort();|
-|err_exit|是|显式参数|exit(1);|
-|err_msg|否||return;|
-|err_quit|否||exit(1);|
-|err_ret|是|errno|return;|
-|err_sys|是|errno|exit(1);|
-|err_cont|是|显式参数|return;|
+|err_dump|是 Yes|errno|abort();|
+|err_exit|是 Yes|显式参数<br>Explicit parameter|exit(1);|
+|err_msg|否 No||return;|
+|err_quit|否 No||exit(1);|
+|err_ret|是 Yes|errno|return;|
+|err_sys|是 Yes|errno|exit(1);|
+|err_cont|是 Yes|显式参数<br>Explicit parameter|return;|
 
 ## apue_log.c
 
@@ -28,8 +28,8 @@ Error print functions for daemon.
 
 |函数<br>functino|从strerror添加字符串？<br>add str from strerror?|strerror的参数<br>args of strerror|终止？<br>terminate?|
 |:--|:--:|:--:|:--|
-|log_msg|否||return;|
-|log_quit|否||exit(2);|
-|log_ret|是|errno|return;|
-|log_sys|是|errno|exit(2);|
-|log_exit|是|显式参数|exit(2);|
+|log_msg|否 No||return;|
+|log_quit|否 No||exit(2);|
+|log_ret|是 Yes|errno|return;|
+|log_sys|是 Yes|errno|exit(2);|
+|log_exit|是 Yes|显式参数<br>Explicit parameter|exit(2);|
